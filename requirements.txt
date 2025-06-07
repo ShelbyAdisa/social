@@ -1,11 +1,15 @@
 asgiref==3.8.1
 beautifulsoup4==4.13.4
+dj-database-url==3.0.0
 Django==5.2.2
 django-bootstrap4==25.1
 django-crispy-forms==2.4
 djangorestframework==3.16.0
 djangorestframework_simplejwt==5.5.0
+gunicorn==23.0.0
+packaging==25.0
 pillow==11.2.1
+psycopg2-binary==2.9.10
 PyJWT==2.9.0
 soupsieve==2.7
 sqlparse==0.5.3
