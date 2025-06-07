@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome - Social Media App{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+        <div class="jumbotron bg-light p-5 rounded">
+            <h1 class="display-4">Welcome to SocialApp</h1>
+            <p class="lead">Connect with friends, share your thoughts, and discover new content.</p>
+            <hr class="my-4">
+            <p>Join our community today and start sharing your story with the world.</p>
+            <div class="mt-4">
+                <a class="btn btn-primary btn-lg me-3" href="{% url 'register' %}" role="button">
+                    <i class="fas fa-user-plus me-2"></i>Sign Up
+                </a>
+                <a class="btn btn-outline-primary btn-lg" href="{% url 'login' %}" role="button">
+                    <i class="fas fa-sign-in-alt me-2"></i>Login
+                </a>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                        <h5>Connect</h5>
+                        <p>Follow friends and discover new people with similar interests.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-share-alt fa-3x text-primary mb-3"></i>
+                        <h5>Share</h5>
+                        <p>Post photos, thoughts, and updates to keep your network informed.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-heart fa-3x text-primary mb-3"></i>
+                        <h5>Engage</h5>
+                        <p>Like, comment, and interact with posts from your community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

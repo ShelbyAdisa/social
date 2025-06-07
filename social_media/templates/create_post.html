@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Post - Social Media App{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">Create New Post</h4>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label for="{{ form.content.id_for_label }}" class="form-label">What's on your mind?</label>
+                        {{ form.content }}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="{{ form.image.id_for_label }}" class="form-label">Add Image (Optional)</label>
+                        {{ form.image }}
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="{{ form.hashtags.id_for_label }}" class="form-label">Hashtags (Optional)</label>
+                        {{ form.hashtags }}
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+                        <button type="submit" class="btn btn-primary">Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+form textarea, form input {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+}
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+</style>
+{% endblock %}
